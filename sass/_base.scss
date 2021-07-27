@@ -12,11 +12,17 @@
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
 
-  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  --shadow-light:0 2rem 5rem rgba(0,0,0,.86);
+  --shadow-light: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-dark: 0 2rem 5rem rgba(0, 0, 0, 0.86);
 
-  --line:1px solid var(--color-grey-light-2);
+  --line: 1px solid var(--color-grey-light-2);
 }
+
+$bg-largest: 75em; //1200px
+$bg-large: 68.75em; //1100px
+$bg-medium: 58.25em; //900px
+$bg-small: 37.5em; //600px
+$bg-smallest: 31.25em; //600px
 
 * {
   margin: 0;
@@ -32,6 +38,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; //1rem = 10px , 10px/16px = 62.5%
+  @media only screen and (max-width: $bg-large) {
+    font-size: 50%;
+  }
 }
 
 body {
